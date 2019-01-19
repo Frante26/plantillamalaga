@@ -1,0 +1,99 @@
+<h2>Plantilla</h2>
+
+
+<h3>Entrenador</h3>
+ <button (click)= "mostrarEntrenador = !mostrarEntrenador"> 
+	{{ mostrarEntrenador ? 'Ocultar Entrenador': 'Mostrar entrenador' }}
+</button>
+	<div *ngIf ="mostrarEntrenador">
+		<ul>
+			<div *ngFor = "let jugador of jugadores">
+			<div *ngIf = "jugador.entrenador === true"> 
+				<li>
+					<a routerLink="/entrenador">Enlace</a>
+					{{ jugador.nombre }}
+				</li>
+			</div>
+			</div>
+		</ul>
+	</div>
+
+<h3>Porteros</h3>
+ <button (click)= "mostrarPortero = !mostrarPortero"> 
+	{{ mostrarPortero ? 'Ocultar Porteros': 'Mostrar Porteros' }}
+</button>
+	<div *ngIf ="mostrarPortero">
+		<ul>
+			<div *ngFor = "let jugador of jugadores">
+			<div *ngIf = "jugador.porteros === true"> 
+				<li>
+					<a routerLink="/entrenador">Enlace</a>
+					{{ jugador.nombre }}
+					{{ jugador.dorsal }}
+					{{ jugador.demarcacion }}
+				</li>
+			</div>
+			</div>
+		</ul>
+	</div>
+
+<h3>Defensas</h3>
+<button (click)= "mostrarDefensa = !mostrarDefensa"> 
+	{{ mostrarDefensa ? 'Ocultar Defensas': 'Mostrar Defensas' }}
+</button>
+	<div *ngIf ="mostrarDefensa">
+		<ul>
+			<div *ngFor = "let jugador of jugadores">
+			<div *ngIf = "jugador.defensas === true"> 
+				<li>
+					<a routerLink="/entrenador">Enlace</a>
+					{{ jugador.nombre }}
+					{{ jugador.dorsal }}
+					{{ jugador.demarcacion }}
+				</li>
+			</div>
+			</div>
+		</ul>
+	</div>
+
+<h3>Centrocampistas</h3>
+<button (click)= "mostrarCentrocampista = !mostrarCentrocampista"> 
+	{{ mostrarCentrocampista ? 'Ocultar Centrocampistas': 'Mostrar Centrocampistas' }}
+</button>
+	<div *ngIf ="mostrarCentrocampista">
+		<ul>
+			<div *ngFor = "let jugador of jugadores">
+			<div *ngIf = "jugador.centrocampistas === true"> 
+				<li>
+					<a routerLink="/entrenador">Enlace</a>
+					{{ jugador.nombre }}
+					{{ jugador.dorsal }}
+					{{ jugador.demarcacion }}
+				</li>
+			</div>
+			</div>
+		</ul>
+	</div>
+
+<h3>Delanteros</h3>
+<button (click)= "mostrarDelantero = !mostrarDelantero"> 
+	{{ mostrarDelantero ? 'Ocultar Delanteros': 'Mostrar Delanteros' }}
+</button>
+	<div *ngIf ="mostrarDelantero">
+		<ul>
+			<div *ngFor = "let jugador of jugadores">
+			<div *ngIf = "jugador.delanteros === true"> 
+				<li>
+					<a routerLink="/entrenador">Enlace</a>
+					{{ jugador.nombre }}
+					{{ jugador.dorsal }}
+					{{ jugador.demarcacion }}
+				</li>
+			</div>
+			</div>
+		</ul>
+	</div>
+
+
+
+
